@@ -3,17 +3,20 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 10;
-    public int swordDamage = 1;
+    public int swordDamage;
     public float invincibilityTime = 0.5f;
     public float flashSpeed = 0.05f;
-
+    public GameObject deadTextPrefab;
     private SpriteRenderer spriteRenderer;
     private float invincibilityTimer;
     private float flashTimer;
+    private PlayerXp playerXP;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerXP = playerObject.GetComponent<PlayerXp>();
     }
 
     void Update()
@@ -44,13 +47,11 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Sword") && invincibilityTimer <= 0)
         {
             health -= swordDamage;
-
-            Debug.Log("Player hit the enemy! Enemy health: " + health);
-
             invincibilityTimer = invincibilityTime;
-
             if (health <= 0)
             {
+                playerXP.AddXP(20);
+                Instantiate(deadTextPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
