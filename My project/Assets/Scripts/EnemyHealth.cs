@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int health = 10;
+    public int health;
     public int swordDamage;
     public float invincibilityTime = 0.5f;
     public float flashSpeed = 0.05f;

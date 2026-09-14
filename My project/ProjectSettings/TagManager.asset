@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sword
   - Enemy
+  - StopBox
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [System.Serializable]
+    [System.Serializable] 
     public class EnemyType
     {
         public GameObject enemyPrefab;
