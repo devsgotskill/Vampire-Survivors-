@@ -7,6 +7,10 @@ public class EnemyMovementTwo : MonoBehaviour
     public float movementSpeed = 2f;
     public bool isInStopBox = false;
     private Player player;
+    public GameObject fireballPrefab;
+    public Transform fireballSpawnPoint;
+    public float fireballCooldown = 2f;
+    public float shootTimer;
 
     void Start()
     {
@@ -15,30 +19,36 @@ public class EnemyMovementTwo : MonoBehaviour
         GameObject stopBoxObject = GameObject.FindGameObjectWithTag("StopBox");
         BoxCollider stopBox = stopBoxObject.GetComponent<BoxCollider>();
     }
-
     void Update()
     {
-        Vector3 direction = player.transform.position - transform.position;
-        direction.z = 0;
-        transform.position += direction.normalized * movementSpeed * Time.deltaTime;
-        if(isInStopBox == true)
+        if (isInStopBox == true)
         {
             movementSpeed = 0f;
-            Shoot();
+            shootTimer -= Time.deltaTime;
+            if (shootTimer <= 0)
+            {
+                Shoot();
+                shootTimer = fireballCooldown;
+            }
         }
         else
         {
             movementSpeed = 2f;
+            Vector3 direction = player.transform.position - transform.position;
+            direction.z = 0;
+            transform.position += direction.normalized * movementSpeed * Time.deltaTime;
         }
     }
-    public void OnTriggerStay(Collider stopBox)
+
+
+    public void OnTriggerStay2D(Collider2D stopBox)
     {
         if (stopBox.CompareTag("StopBox"))
         {
             isInStopBox = true;
         }
     }
-    public void OnTriggerExit(Collider stopBox)
+    public void OnTriggerExit2D(Collider2D stopBox)
     {
         if (stopBox.CompareTag("StopBox"))
         {
@@ -47,6 +57,10 @@ public class EnemyMovementTwo : MonoBehaviour
     }
     public void Shoot()
     {
-        
+        Vector3 direction = player.transform.position - fireballSpawnPoint.position;
+        direction.z = 0;
+        GameObject fireball = Instantiate(fireballPrefab, fireballSpawnPoint.position, Quaternion.identity);
+        Fireball fireballScript = fireball.GetComponent<Fireball>();
+        fireballScript.SetDirection(direction.normalized);
     }
 }

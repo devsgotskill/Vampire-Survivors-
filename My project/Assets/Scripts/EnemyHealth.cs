@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Sword") && invincibilityTimer <= 0)
         {
