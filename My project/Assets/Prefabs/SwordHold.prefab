@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3095543445403976958}
   - component: {fileID: 7440162416758549792}
-  - component: {fileID: 7263112453601352216}
+  - component: {fileID: 4646691596559223558}
+  - component: {fileID: 2785544064632483290}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Sword
@@ -92,13 +93,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!65 &7263112453601352216
-BoxCollider:
+--- !u!61 &4646691596559223558
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055664761398401646}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,12 +111,47 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.03573264, y: -0.034698974}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.24853471, y: 0.25060204}
+  m_EdgeRadius: 0
+--- !u!114 &2785544064632483290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055664761398401646}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.2, z: 0.1}
-  m_Center: {x: -0.05, y: -0.06, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837d0c3d3ca534444857008969b23874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwordFollowMouse
+  rotationOffset: -50
 --- !u!1 &3668644040307159624
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +161,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4280972720639509437}
-  - component: {fileID: 9074723129174607772}
   - component: {fileID: 6265554038149849019}
   m_Layer: 0
   m_Name: SwordHold
@@ -147,19 +185,6 @@ Transform:
   - {fileID: 3095543445403976958}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
---- !u!114 &9074723129174607772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3668644040307159624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 837d0c3d3ca534444857008969b23874, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  rotationOffset: -50
 --- !u!114 &6265554038149849019
 MonoBehaviour:
   m_ObjectHideFlags: 0
