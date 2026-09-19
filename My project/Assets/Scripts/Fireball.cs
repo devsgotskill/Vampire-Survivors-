@@ -1,35 +1,27 @@
 using UnityEngine;
-
 public class Fireball : MonoBehaviour
 {
     public float speed = 5f;
     public float despawnTime = 5f;
-
     private Vector3 direction;
-
+    private float despawnTimer;
     void Start()
     {
-        GameObject stopBox = GameObject.FindGameObjectWithTag("StopBox");
-
-        if (stopBox != null)
-        {
-            Collider2D fireballCollider = GetComponent<Collider2D>();
-            Collider2D stopBoxCollider = stopBox.GetComponent<Collider2D>();
-
-            if (fireballCollider != null && stopBoxCollider != null)
-            {
-                Physics2D.IgnoreCollision(fireballCollider, stopBoxCollider);
-            }
-        }
-
-        Destroy(gameObject, despawnTime);
+        despawnTimer = despawnTime;
     }
-
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying())
+        {
+            return;
+        }
         transform.position += direction * speed * Time.deltaTime;
+        despawnTimer -= Time.deltaTime;
+        if (despawnTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
-
     public void SetDirection(Vector3 newDirection)
     {
         direction = newDirection.normalized;

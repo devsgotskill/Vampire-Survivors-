@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class PlayerDamage : MonoBehaviour
 {
     private Player player;
@@ -12,6 +13,10 @@ public class PlayerDamage : MonoBehaviour
     }
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying())
+        {
+            return;
+        }
         if (damageTimer > 0)
         {
             damageTimer -= Time.deltaTime;
@@ -19,11 +24,16 @@ public class PlayerDamage : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D other)
     {
+        if (!GameManager.Instance.IsPlaying())
+        {
+            return;
+        }
+
         if (!playerCollider.IsTouching(other))
         {
             return;
         }
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy")) 
         {
             if (damageTimer <= 0)
             {
@@ -34,6 +44,10 @@ public class PlayerDamage : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (!GameManager.Instance.IsPlaying())
+        {
+            return;
+        }
         if (!playerCollider.IsTouching(other))
         {
             return;

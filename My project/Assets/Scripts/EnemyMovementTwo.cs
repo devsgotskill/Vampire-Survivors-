@@ -1,58 +1,41 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-
 public class EnemyMovementTwo : MonoBehaviour
 {
     public float movementSpeed = 2f;
-    public bool isInStopBox = false;
-    private Player player;
+    public float shootingDistance = 5f;
     public GameObject fireballPrefab;
     public Transform fireballSpawnPoint;
     public float fireballCooldown = 2f;
     public float shootTimer;
-
+    private Player player;
     void Start()
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
-        GameObject stopBoxObject = GameObject.FindGameObjectWithTag("StopBox");
-        BoxCollider stopBox = stopBoxObject.GetComponent<BoxCollider>();
+        shootTimer = fireballCooldown;
     }
     void Update()
     {
-        if (isInStopBox == true)
+        if (!GameManager.Instance.IsPlaying())
         {
-            movementSpeed = 0f;
+            return;
+        }
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (distanceToPlayer > shootingDistance)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            direction.z = 0;
+            transform.position += direction.normalized * movementSpeed * Time.deltaTime;
+        }
+        else
+        {
             shootTimer -= Time.deltaTime;
+
             if (shootTimer <= 0)
             {
                 Shoot();
                 shootTimer = fireballCooldown;
             }
-        }
-        else
-        {
-            movementSpeed = 2f;
-            Vector3 direction = player.transform.position - transform.position;
-            direction.z = 0;
-            transform.position += direction.normalized * movementSpeed * Time.deltaTime;
-        }
-    }
-
-
-    public void OnTriggerStay2D(Collider2D stopBox)
-    {
-        if (stopBox.CompareTag("StopBox"))
-        {
-            isInStopBox = true;
-        }
-    }
-    public void OnTriggerExit2D(Collider2D stopBox)
-    {
-        if (stopBox.CompareTag("StopBox"))
-        {
-            isInStopBox = false;
         }
     }
     public void Shoot()

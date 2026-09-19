@@ -1,12 +1,9 @@
 using UnityEngine;
-
 public class PlayerXp : MonoBehaviour
 {
     public int XP;
     public int level = 0;
-
     public int[] xpRequiredPerLevel = { 100, 160, 300, 500, 750, 1050 };
-
     public int XPNeeded
     {
         get
@@ -15,11 +12,9 @@ public class PlayerXp : MonoBehaviour
             {
                 return xpRequiredPerLevel[xpRequiredPerLevel.Length - 1];
             }
-
             return xpRequiredPerLevel[level];
         }
     }
-
     public void AddXP(int amount)
     {
         XP += amount;
@@ -28,6 +23,7 @@ public class PlayerXp : MonoBehaviour
         {
             XP -= XPNeeded;
             level++;
+            GameManager.Instance.ChangeState(new UpgradeState());
         }
     }
 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class EnemyHealth : MonoBehaviour
 {
     public int health;
@@ -11,16 +10,18 @@ public class EnemyHealth : MonoBehaviour
     private float invincibilityTimer;
     private float flashTimer;
     private PlayerXp playerXP;
-
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         playerXP = playerObject.GetComponent<PlayerXp>();
     }
-
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying())
+        {
+            return;
+        }
         if (invincibilityTimer > 0)
         {
             invincibilityTimer -= Time.deltaTime;
@@ -32,7 +33,6 @@ public class EnemyHealth : MonoBehaviour
                 spriteRenderer.enabled = !spriteRenderer.enabled;
                 flashTimer = 0;
             }
-
             if (invincibilityTimer <= 0)
             {
                 invincibilityTimer = 0;
@@ -41,9 +41,12 @@ public class EnemyHealth : MonoBehaviour
             }
         }
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (!GameManager.Instance.IsPlaying())
+        {
+            return;
+        }
         if (other.CompareTag("Sword") && invincibilityTimer <= 0)
         {
             health -= swordDamage;

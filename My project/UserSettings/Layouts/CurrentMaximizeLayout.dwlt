@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 168}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 0
-  controlID: 34375
+  controlID: 5668
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 168}
   m_MaxSize: {x: 16192, y: 24288}
   vertical: 1
-  controlID: 34376
+  controlID: 5669
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 34377
+  controlID: 5670
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -200,8 +200,8 @@ MonoBehaviour:
     y: 0
     width: 208
     height: 734
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -249,24 +249,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -107986
+      - m_Data: -6462
       m_LastClickedID:
-        m_Data: -107986
+        m_Data: -6462
       m_ExpandedIDs:
-      - m_Data: -131050
-      - m_Data: -123344
-      - m_Data: -108036
-      - m_Data: -107992
-      - m_Data: -107990
-      - m_Data: -107988
-      - m_Data: -105466
-      - m_Data: -45330
-      - m_Data: -1346
+      - m_Data: -5486
+      - m_Data: -5442
+      - m_Data: -5436
+      - m_Data: -4998
       - m_Data: -1344
-      - m_Data: 48670
-      - m_Data: 48752
-      - m_Data: 65132
-      - m_Data: 65256
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -316,7 +307,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 34378
+  controlID: 5671
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -393,7 +384,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -403,26 +394,26 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Devs PC\Documents\GitHub\Vampire-Survivors-\My project
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 89}
+    scrollPos: {x: 0, y: 57}
     m_SelectedIDs:
-    - m_Data: 49304
+    - m_Data: 49454
     m_LastClickedID:
-      m_Data: 49304
+      m_Data: 49454
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49302
-    - m_Data: 49308
-    - m_Data: 49316
-    - m_Data: 68382
-    - m_Data: 68384
-    - m_Data: 68516
+    - m_Data: 49324
+    - m_Data: 49326
+    - m_Data: 49328
+    - m_Data: 49330
+    - m_Data: 49332
+    - m_Data: 49446
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -456,6 +447,11 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
+    - m_Data: 49324
+    - m_Data: 49326
+    - m_Data: 49328
+    - m_Data: 49330
+    - m_Data: 49332
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -484,9 +480,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -107986
-    m_LastClickedInstanceID: -107986
-    m_HadKeyboardFocusLastEvent: 1
+    - m_Data: -6462
+    m_LastClickedInstanceID: -6462
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 48646
     - m_Data: 48750
@@ -529,7 +525,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 51}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -1043,9 +1039,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -25.371489, y: 8.558608, z: 9.141731}
+    m_Target: {x: -0.07520487, y: 0.07291596, z: -0.0010656314}
     speed: 2
-    m_Value: {x: -25.371489, y: 8.558608, z: 9.141731}
+    m_Value: {x: -0.07520487, y: 0.07291596, z: -0.0010656314}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1091,13 +1087,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.11350685, y: 0.03693785, z: 0.004163105, w: -0.9928495}
+    m_Target: {x: 0.02377656, y: -0.061762523, z: -0.0015326168, w: -0.997817}
     speed: 2
-    m_Value: {x: 0.11350596, y: 0.03693756, z: 0.0041630724, w: -0.9928417}
+    m_Value: {x: 0.02377631, y: -0.061761875, z: -0.0015326007, w: -0.9978065}
   m_Size:
-    m_Target: 7.071068
+    m_Target: 0.5028916
     speed: 2
-    m_Value: 7.071068
+    m_Value: 0.5028916
   m_Ortho:
     m_Target: 0
     speed: 2
