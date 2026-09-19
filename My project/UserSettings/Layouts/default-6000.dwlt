@@ -668,7 +668,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -742,7 +742,10 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
+      m_SelectedIDs:
       - m_Data: -4998
+      - m_Data: -1356
+      - m_Data: -1350
       m_LastClickedID:
         m_Data: -4998
       m_ExpandedIDs:
@@ -750,6 +753,8 @@ MonoBehaviour:
       - m_Data: -5442
       - m_Data: -5436
       - m_Data: -4998
+      - m_Data: -1354
+      - m_Data: -1346
       - m_Data: -1344
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -844,11 +849,16 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 89}
     m_SelectedIDs:
+    m_SelectedIDs:
     - m_Data: 49458
+    - m_Data: 49314
+    - m_Data: 49446
     m_LastClickedID:
       m_Data: 49458
     m_ExpandedIDs:
     - m_Data: 0
+    - m_Data: 49188
+    - m_Data: 49190
     - m_Data: 49324
     - m_Data: 49326
     - m_Data: 49328
@@ -888,6 +898,8 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
+    - m_Data: 49188
+    - m_Data: 49190
     - m_Data: 49324
     - m_Data: 49326
     - m_Data: 49328
@@ -921,7 +933,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
+    m_SelectedInstanceIDs:
     - m_Data: -4998
+    - m_Data: -1356
+    - m_Data: -1350
     m_LastClickedInstanceID: -4998
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
@@ -1356,7 +1371,7 @@ MonoBehaviour:
       sizeOverridden: 0
     - dockPosition: 1
       containerId: overlay-container--right
-      displayed: 1
+      displayed: 0
       id: Scene View/Tilemap Focus
       index: 0
       contents: '{"m_Layout":4,"m_Collapsed":false,"m_Folded":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
