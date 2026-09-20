@@ -13,6 +13,6 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        healthBar.fillAmount = (float)player.health / 100;
+        healthBar.fillAmount = (float)player.health /  100;
     }
 }
