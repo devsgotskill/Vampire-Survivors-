@@ -137,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   health: 100
   swordDamage: 20
+  axeDamage: 30
+  katanaDamage: 40
+  pistolBulletDamage: 20
   invincibilityTime: 0.5
   flashSpeed: 0.05
   deadTextPrefab: {fileID: 8735870643710744921, guid: f4518fe6c25c58b499612686ec3e1ef0, type: 3}

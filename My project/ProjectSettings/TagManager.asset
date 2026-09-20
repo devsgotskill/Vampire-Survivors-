@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - StopBox
   - Fireball
+  - Axe
+  - Katana
+  - Gun
+  - PistolBullet
   layers:
   - Default
   - TransparentFX

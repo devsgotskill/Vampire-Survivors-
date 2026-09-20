@@ -5,12 +5,14 @@ public class Fireball : MonoBehaviour
     public float despawnTime = 5f;
     private Vector3 direction;
     private float despawnTimer;
+    public int rotationSpeed = 100;
     void Start()
     {
         despawnTimer = despawnTime;
     }
     void Update()
     {
+        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         if (!GameManager.Instance.IsPlaying())
         {
             return;

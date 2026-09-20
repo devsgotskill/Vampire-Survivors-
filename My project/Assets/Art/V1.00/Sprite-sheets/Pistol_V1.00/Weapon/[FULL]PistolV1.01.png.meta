@@ -1,0 +1,401 @@
+fileFormatVersion: 2
+guid: bd15e9a93e0b07443bfc513a56f8ad2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1468778687981988818
+    second: '[FULL]PistolV1.01_0'
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_0'
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4
+        width: 28
+        height: 18
+      alignment: 9
+      pivot: {x: 0.47045246, y: 0.5284541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e245b21b099dd9be0800000000000000
+      internalID: -1468778687981988818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_1'
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 4
+        width: 33
+        height: 18
+      alignment: 9
+      pivot: {x: 0.41188025, y: 0.5270134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c89d1a24c7831a4a907336e78c6e43d
+      internalID: 1972216703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_2'
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 4
+        width: 35
+        height: 20
+      alignment: 9
+      pivot: {x: 0.38630852, y: 0.47242132}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9e8f9b7d212064f837ebba067a1949
+      internalID: 1654822068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_3'
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 4
+        width: 39
+        height: 18
+      alignment: 9
+      pivot: {x: 0.34745866, y: 0.5262654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d61ed94448aea147bbba87ab8730332
+      internalID: 1821314854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_4'
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 4
+        width: 42
+        height: 20
+      alignment: 9
+      pivot: {x: 0.34803554, y: 0.4763611}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9aa8324f87e05043b30caae05d6af09
+      internalID: 2061163705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_5'
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 4
+        width: 47
+        height: 22
+      alignment: 9
+      pivot: {x: 0.30636206, y: 0.4319487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a50e362e0bd27a4b8696da81b5521e1
+      internalID: 59686253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_6'
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 4
+        width: 47
+        height: 24
+      alignment: 9
+      pivot: {x: 0.28624386, y: 0.39657995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f94c3ec2d0f53448babf51532f5196e
+      internalID: -658270685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_7'
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 4
+        width: 52
+        height: 25
+      alignment: 9
+      pivot: {x: 0.25830725, y: 0.38022968}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db93413cd394734092fd08d1f3b6053
+      internalID: 2040088800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_9'
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 4
+        width: 60
+        height: 25
+      alignment: 9
+      pivot: {x: 0.25638834, y: 0.37865376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b129f86b8a866848aa92d1007ed1ac9
+      internalID: 689322628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_12'
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 4
+        width: 61
+        height: 18
+      alignment: 9
+      pivot: {x: 0.22098328, y: 0.52188784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0277d665987ff45bf1c3be8a4a1ee1
+      internalID: -268965484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_13'
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 4
+        width: 61
+        height: 18
+      alignment: 9
+      pivot: {x: 0.22098328, y: 0.5284541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995a9dff7031eed4d8fdb978c4dce49d
+      internalID: 1873461287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[FULL]PistolV1.01_14'
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 4
+        width: 28
+        height: 18
+      alignment: 9
+      pivot: {x: 0.48452106, y: 0.5284541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f13ae20af39f914ab80a45c3f1e085b
+      internalID: 1014161730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e56ea1dc40aad7947ab1d76078406a37
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      '[FULL]PistolV1.01_0': -1468778687981988818
+      '[FULL]PistolV1.01_1': 1972216703
+      '[FULL]PistolV1.01_10': 816516693
+      '[FULL]PistolV1.01_11': -900049499
+      '[FULL]PistolV1.01_12': -268965484
+      '[FULL]PistolV1.01_13': 1873461287
+      '[FULL]PistolV1.01_14': 1014161730
+      '[FULL]PistolV1.01_2': 1654822068
+      '[FULL]PistolV1.01_3': 1821314854
+      '[FULL]PistolV1.01_4': 2061163705
+      '[FULL]PistolV1.01_5': 59686253
+      '[FULL]PistolV1.01_6': -658270685
+      '[FULL]PistolV1.01_7': 2040088800
+      '[FULL]PistolV1.01_8': 677722701
+      '[FULL]PistolV1.01_9': 689322628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

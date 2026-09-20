@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   speed: 2.5
   despawnTime: 5
+  rotationSpeed: 400
 --- !u!50 &8020831294791318546
 Rigidbody2D:
   serializedVersion: 5

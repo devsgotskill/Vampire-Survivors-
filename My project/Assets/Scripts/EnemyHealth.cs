@@ -3,6 +3,9 @@ public class EnemyHealth : MonoBehaviour
 {
     public int health;
     public int swordDamage;
+    public int axeDamage;
+    public int katanaDamage;
+    public int pistolBulletDamage;
     public float invincibilityTime = 0.5f;
     public float flashSpeed = 0.05f;
     public GameObject deadTextPrefab;
@@ -50,6 +53,39 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Sword") && invincibilityTimer <= 0)
         {
             health -= swordDamage;
+            invincibilityTimer = invincibilityTime;
+            if (health <= 0)
+            {
+                playerXP.AddXP(20);
+                Instantiate(deadTextPrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
+        if (other.CompareTag("Axe") && invincibilityTimer <= 0)
+        {
+            health -= axeDamage;
+            invincibilityTimer = invincibilityTime;
+            if (health <= 0)
+            {
+                playerXP.AddXP(20);
+                Instantiate(deadTextPrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
+        if (other.CompareTag("Katana") && invincibilityTimer <= 0)
+        {
+            health -= katanaDamage;
+            invincibilityTimer = invincibilityTime;
+            if (health <= 0)
+            {
+                playerXP.AddXP(20);
+                Instantiate(deadTextPrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
+        if (other.CompareTag("PistolBullet") && invincibilityTimer <= 0)
+        {
+            health -= pistolBulletDamage;
             invincibilityTimer = invincibilityTime;
             if (health <= 0)
             {

@@ -287,6 +287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 100
   swordDamage: 20
+  axeDamage: 30
+  katanaDamage: 40
+  pistolBulletDamage: 20
   invincibilityTime: 0.5
   flashSpeed: 0.05
   deadTextPrefab: {fileID: 6941855628647401920, guid: 07ea1341516255c4aa30d0b4553eea9e, type: 3}
@@ -303,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   movementSpeed: 0.1
-  isInStopBox: 0
+  shootingDistance: 5
   fireballPrefab: {fileID: 8428509243883602393, guid: 71fcec563b5d70641aec92299dd43800, type: 3}
   fireballSpawnPoint: {fileID: 1072718037887188405}
   fireballCooldown: 2
