@@ -23,7 +23,7 @@ public class PlayerXp : MonoBehaviour
         {
             XP -= XPNeeded;
             level++;
-            GameManager.Instance.ChangeState(new UpgradeState());
+            //GameManager.Instance.ChangeState(new UpgradeState());
         }
     }
 }

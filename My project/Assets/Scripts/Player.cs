@@ -3,6 +3,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    public Animator animator;
     public int maxHealth = 100;
     public int health = 100;
     public TextMeshProUGUI healthText;
@@ -30,18 +31,22 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             movementDirection += Vector3.up;
+            animator.SetTrigger("WalkUp");
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             movementDirection += Vector3.down;
+            animator.SetTrigger("WalkDown");
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             movementDirection += Vector3.left;
+            animator.SetTrigger("WalkLeft");
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             movementDirection += Vector3.right;
+            animator.SetTrigger("WalkRight");
         }
         movementDirection = movementDirection.normalized;
         if (dashCooldownTimer > 0)

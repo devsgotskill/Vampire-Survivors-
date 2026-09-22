@@ -1,6 +1,8 @@
 using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
+    public AudioSource damageByGunSound;
+    public AudioSource damageByMeleeSound;
     public int health;
     public int swordDamage;
     public int axeDamage;
@@ -53,7 +55,8 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Sword") && invincibilityTimer <= 0)
         {
             health -= swordDamage;
-            invincibilityTimer = invincibilityTime;
+            damageByMeleeSound.Play();
+            invincibilityTimer = invincibilityTime;        
             if (health <= 0)
             {
                 playerXP.AddXP(20);
@@ -64,6 +67,7 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Axe") && invincibilityTimer <= 0)
         {
             health -= axeDamage;
+            damageByMeleeSound.Play();
             invincibilityTimer = invincibilityTime;
             if (health <= 0)
             {
@@ -75,6 +79,7 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Katana") && invincibilityTimer <= 0)
         {
             health -= katanaDamage;
+            damageByMeleeSound.Play();
             invincibilityTimer = invincibilityTime;
             if (health <= 0)
             {
@@ -83,9 +88,10 @@ public class EnemyHealth : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (other.CompareTag("PistolBullet") && invincibilityTimer <= 0)
+        if (other.CompareTag("PistolBullet"))
         {
             health -= pistolBulletDamage;
+            damageByGunSound.Play();
             invincibilityTimer = invincibilityTime;
             if (health <= 0)
             {
