@@ -1,27 +1,38 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class BulletBar : MonoBehaviour
 {
     public Image bulletBar;
-    private Glock glock;
-
-    void Start()
-    {
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Gun");
-        glock = playerObject.GetComponent<Glock>();
-    }
+    public GameObject gunUI;
+    private Gun gun;
     void Update()
     {
-        if (glock.isReloading)
+        if (gun == null || !gun.gameObject.activeInHierarchy)
         {
-            float startingFill = (float)glock.currentMagazine / glock.magazineSize;
-            float reloadProgress = 1f - (glock.reloadTimer / glock.reloadTime);
+            GameObject gunObject = GameObject.FindGameObjectWithTag("Gun");
 
-            bulletBar.fillAmount = Mathf.Lerp(startingFill, 1f, reloadProgress);
+            if (gunObject != null)
+            {
+                gun = gunObject.GetComponent<Gun>();
+            }
+        }
+        if (gun == null || !gun.gameObject.activeInHierarchy)
+        {
+            gunUI.SetActive(false);
+            return;
+        }
+        gunUI.SetActive(true);
+
+        if (gun.isReloading)
+        {
+            float startingFill = (float)gun.currentMagazine / gun.magazineSize;
+            float reloadProgress = 1f - (gun.reloadTimer / gun.reloadTime);
+            bulletBar.fillAmount = startingFill + (1f - startingFill) * reloadProgress;
         }
         else
         {
-            bulletBar.fillAmount = (float)glock.currentMagazine / glock.magazineSize;
+            bulletBar.fillAmount = (float)gun.currentMagazine / gun.magazineSize;
         }
     }
 }

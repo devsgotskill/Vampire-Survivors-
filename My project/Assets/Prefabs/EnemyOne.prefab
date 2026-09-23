@@ -144,6 +144,7 @@ MonoBehaviour:
   axeDamage: 30
   katanaDamage: 40
   pistolBulletDamage: 20
+  akBulletDamage: 15
   invincibilityTime: 0.5
   flashSpeed: 0.05
   deadTextPrefab: {fileID: 8735870643710744921, guid: f4518fe6c25c58b499612686ec3e1ef0, type: 3}
@@ -330,7 +331,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c97bc87a7f7607740a2754c9c606d166, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

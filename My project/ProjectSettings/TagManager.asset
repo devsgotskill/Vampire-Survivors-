@@ -12,6 +12,7 @@ TagManager:
   - Katana
   - Gun
   - PistolBullet
+  - AkBullet
   layers:
   - Default
   - TransparentFX

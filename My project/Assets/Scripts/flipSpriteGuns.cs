@@ -2,11 +2,10 @@ using UnityEngine;
 public class flipSpriteGuns : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    public GameObject gun;
+    public GameObject weapon;
     void Start()
     {
-        gun = GameObject.FindGameObjectWithTag("Gun");
-        spriteRenderer = gun.GetComponent<SpriteRenderer>();
+        spriteRenderer = weapon.GetComponent<SpriteRenderer>();
     }
     void Update()
     {

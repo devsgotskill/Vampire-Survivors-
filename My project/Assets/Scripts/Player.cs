@@ -4,14 +4,14 @@ using TMPro;
 public class Player : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 100;
-    public int health = 100;
+    public int maxHealth;
+    public int health;
     public TextMeshProUGUI healthText;
     public int movementSpeed;
     public int dashSpeed;
-    public float dashTime = 0.15f;
-    public float dashCooldown = 1f;
-    public float invincibilityTime = 1f;
+    public float dashTime;
+    public float dashCooldown;
+    public float invincibilityTime;
     private Vector3 movementDirection;
     private float dashTimer;
     public float dashCooldownTimer;
@@ -31,24 +31,40 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             movementDirection += Vector3.up;
-            animator.SetTrigger("WalkUp");
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             movementDirection += Vector3.down;
-            animator.SetTrigger("WalkDown");
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             movementDirection += Vector3.left;
-            animator.SetTrigger("WalkLeft");
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             movementDirection += Vector3.right;
-            animator.SetTrigger("WalkRight");
         }
         movementDirection = movementDirection.normalized;
+        if (movementDirection == Vector3.zero)
+        {
+            animator.SetInteger("AnimationState", 0);
+        }
+        else if (movementDirection.y > 0)
+        {
+            animator.SetInteger("AnimationState", 1);
+        }
+        else if (movementDirection.y < 0)
+        {
+            animator.SetInteger("AnimationState", 2);
+        }
+        else if (movementDirection.x < 0)
+        {
+            animator.SetInteger("AnimationState", 3);
+        }
+        else if (movementDirection.x > 0)
+        {
+            animator.SetInteger("AnimationState", 4);
+        }
         if (dashCooldownTimer > 0)
         {
             dashCooldownTimer -= Time.deltaTime;

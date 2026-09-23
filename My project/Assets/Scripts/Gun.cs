@@ -1,15 +1,15 @@
 using UnityEngine;
 using TMPro;
-public class Glock : MonoBehaviour
+public class Gun : MonoBehaviour
 {
     public AudioSource shooting;
     public AudioSource reloading;
-    public GameObject pistolBullet;
+    public GameObject bullet;
     public Transform firePoint;
     public TextMeshProUGUI ammoText;
-    public int magazineSize = 12;
-    public float fireRate = 0.2f;
-    public float reloadTime = 1.5f;
+    public int magazineSize;
+    public float fireRate;
+    public float reloadTime;
     public Animator animator;
     public int currentMagazine;
     public float fireCooldown;
@@ -48,7 +48,7 @@ public class Glock : MonoBehaviour
             UpdateAmmoText();
             return;
         }
-        if (Input.GetMouseButtonDown(0) && currentMagazine > 0 && fireCooldown <= 0)
+        if (Input.GetMouseButton(0) && currentMagazine > 0 && fireCooldown <= 0)
         {
             Shoot();
             UpdateAmmoText();
@@ -66,7 +66,7 @@ public class Glock : MonoBehaviour
         currentMagazine--;
         fireCooldown = fireRate;
         animator.SetTrigger("Shoot");
-        Instantiate(pistolBullet, firePoint.position, firePoint.rotation);
+        Instantiate(bullet, firePoint.position, firePoint.rotation);
         UpdateAmmoText();
     }
     void StartReload()
