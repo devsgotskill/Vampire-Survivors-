@@ -33,4 +33,8 @@ public class GameManager : MonoBehaviour
     {
         return stateMachine.CurrentState is PausedState;
     }
+    public bool IsUpgrade()
+    {
+        return stateMachine.CurrentState is UpgradeState;
+    }
 }

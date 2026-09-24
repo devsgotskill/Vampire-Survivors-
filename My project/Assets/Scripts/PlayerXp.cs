@@ -18,12 +18,14 @@ public class PlayerXp : MonoBehaviour
     public void AddXP(int amount)
     {
         XP += amount;
-
         while (XP >= XPNeeded)
         {
             XP -= XPNeeded;
             level++;
-            //GameManager.Instance.ChangeState(new UpgradeState());
+            if (level == 3)
+            {
+                GameManager.Instance.ChangeState(new UpgradeState());
+            }
         }
     }
 }
