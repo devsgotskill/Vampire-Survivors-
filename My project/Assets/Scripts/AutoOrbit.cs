@@ -12,10 +12,6 @@ public class AutoOrbit : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.Instance.IsPlaying())
-        {
-            return;
-        }
         angle += rotationSpeed * Time.deltaTime;
         transform.position = player.transform.position;
         transform.rotation = Quaternion.Euler(0, 0, angle);

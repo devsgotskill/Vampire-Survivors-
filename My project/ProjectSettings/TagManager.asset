@@ -13,6 +13,7 @@ TagManager:
   - Gun
   - PistolBullet
   - AkBullet
+  - EnemyThree
   layers:
   - Default
   - TransparentFX

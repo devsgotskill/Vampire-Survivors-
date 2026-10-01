@@ -24,16 +24,10 @@ public class EnemyHealth : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.Instance.IsPlaying())
-        {
-            return;
-        }
         if (invincibilityTimer > 0)
         {
             invincibilityTimer -= Time.deltaTime;
-
             flashTimer += Time.deltaTime;
-
             if (flashTimer >= flashSpeed)
             {
                 spriteRenderer.enabled = !spriteRenderer.enabled;

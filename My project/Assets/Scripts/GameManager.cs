@@ -1,8 +1,11 @@
 using UnityEngine;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public MonoBehaviour[] scripts;
     private GameStateMachine<IGameState> stateMachine;
+
     private void Awake()
     {
         if (Instance == null)
@@ -17,6 +20,7 @@ public class GameManager : MonoBehaviour
         stateMachine = new GameStateMachine<IGameState>();
         stateMachine.ChangeState(new PlayingState());
     }
+
     private void Update()
     {
         stateMachine.Update();
@@ -36,5 +40,15 @@ public class GameManager : MonoBehaviour
     public bool IsUpgrade()
     {
         return stateMachine.CurrentState is UpgradeState;
+    }
+    public void SetGameplayScripts(bool enabled)
+    {
+        foreach (MonoBehaviour script in scripts)
+        {
+            if (script != null)
+            {
+                script.enabled = enabled;
+            }
+        }
     }
 }

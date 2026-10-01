@@ -41,6 +41,14 @@ public class PlayerDamage : MonoBehaviour
                 damageTimer = damageCooldown;
             }
         }
+        if (other.CompareTag("EnemyThree"))
+        {
+            if (damageTimer <= 0)
+            {
+                player.TakeDamage(20);
+                damageTimer = damageCooldown;
+            }
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {

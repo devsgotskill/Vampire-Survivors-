@@ -12,10 +12,6 @@ public class SwordOrbit : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.Instance.IsPlaying())
-        {
-            return;
-        }
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = -mainCamera.transform.position.z;
         Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(mousePosition);

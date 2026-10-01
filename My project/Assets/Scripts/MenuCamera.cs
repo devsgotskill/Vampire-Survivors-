@@ -1,17 +1,27 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 public class MenuCamera : MonoBehaviour
 {
-    public float rotationSpeed = 5f;
+    public float moveSpeed = 5f;
+    public float mainMenuPosition = 0f;
+    public float optionsPosition = 10f;
+    public float howToPlayPosition = -10f;
+    public float leaderboardPosition = 20f;
     public SpriteRenderer fadeImage;
     public float fadeSpeed = 2f;
-    private Quaternion targetRotation;
+    private float targetX;
+    private float targetY;
     private bool fading = false;
     void Start()
     {
-        targetRotation = transform.rotation;
-        transform.position = new Vector3(transform.position.x, transform.position.y, -1.85f);
+        targetX = transform.position.x;
+        targetY = transform.position.y;
+        Vector3 position = transform.position;
+        position.z = -1.85f;
+        transform.position = position;
         Color color = fadeImage.color;
         color.a = 0f;
         fadeImage.color = color;
@@ -19,15 +29,15 @@ public class MenuCamera : MonoBehaviour
     void Update()
     {
         Vector3 position = transform.position;
+        position.x = Mathf.Lerp(position.x, targetX, moveSpeed * Time.deltaTime);
+        position.y = Mathf.Lerp(position.y, targetY, moveSpeed * Time.deltaTime);
         position.z = -1.85f;
         transform.position = position;
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         if (fading)
         {
             Color color = fadeImage.color;
             color.a += fadeSpeed * Time.deltaTime;
             fadeImage.color = color;
-
             if (color.a >= 1f)
             {
                 color.a = 1f;
@@ -38,19 +48,19 @@ public class MenuCamera : MonoBehaviour
     }
     public void GoToOptions()
     {
-        targetRotation = Quaternion.Euler(0f, 90f, 0f);
+        targetX = optionsPosition;
     }
     public void GoToHowToPlay()
     {
-        targetRotation = Quaternion.Euler(0f, -90f, 0f);
+        targetX = howToPlayPosition;
     }
     public void GoToLeaderboard()
     {
-        targetRotation = Quaternion.Euler(-90f, 0f, 0f);
+        targetY = leaderboardPosition;
     }
     public void GoToMainMenu()
     {
-        targetRotation = Quaternion.Euler(0f, 0f, 0f);
+        targetX = mainMenuPosition;
     }
     public void NextScene()
     {

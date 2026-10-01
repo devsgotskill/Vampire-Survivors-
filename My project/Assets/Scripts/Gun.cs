@@ -24,10 +24,6 @@ public class Gun : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.Instance.IsPlaying())
-        {
-            return;
-        }
         if (fireCooldown > 0)
         {
             fireCooldown -= Time.deltaTime;

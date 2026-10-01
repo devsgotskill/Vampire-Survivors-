@@ -23,10 +23,6 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.Instance.IsPlaying())
-        {
-            return;
-        }
         movementDirection = Vector3.zero;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
