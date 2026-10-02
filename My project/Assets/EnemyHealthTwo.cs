@@ -106,7 +106,7 @@ public class EnemyHealthTwo : MonoBehaviour
             invincibilityTimer = invincibilityTime;
             if (health <= 0)
             {
-                playerXP.AddXP(50);
+                playerXP.AddXP(20);
                 Instantiate(deadTextPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }

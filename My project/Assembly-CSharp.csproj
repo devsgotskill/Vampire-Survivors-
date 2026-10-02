@@ -73,6 +73,7 @@
     <Compile Include="Assets\EnemyHealthTwo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\EnemyMovementTwo.cs" />
+    <Compile Include="Assets\DeathState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
@@ -86,11 +87,9 @@
     <Compile Include="Assets\Scripts\FlipSprite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\PauseManager.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\GameStateMachine.cs" />
     <Compile Include="Assets\Scripts\PauseState.cs" />
-=======
->>>>>>> Stashed changes
+    <Compile Include="Assets\DeathManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />

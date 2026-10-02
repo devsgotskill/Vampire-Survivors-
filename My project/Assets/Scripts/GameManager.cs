@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public MonoBehaviour[] scripts;
+    public MonoBehaviour[] ScriptsToPause;
     private GameStateMachine<IGameState> stateMachine;
 
     private void Awake()
@@ -41,9 +41,13 @@ public class GameManager : MonoBehaviour
     {
         return stateMachine.CurrentState is UpgradeState;
     }
+    public bool IsDead()
+    {
+        return stateMachine.CurrentState is DeathState;
+    }
     public void SetGameplayScripts(bool enabled)
     {
-        foreach (MonoBehaviour script in scripts)
+        foreach (MonoBehaviour script in ScriptsToPause)
         {
             if (script != null)
             {

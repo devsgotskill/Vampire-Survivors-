@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
-    public GameObject pauseMenu;
+    public GameObject PauseMenu;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -19,12 +19,12 @@ public class PauseManager : MonoBehaviour
     }
     public void Pause()
     {
-        pauseMenu.SetActive(true);
+        PauseMenu.SetActive(true);
         GameManager.Instance.ChangeState(new PausedState());
     }
     public void Resume()
     {
-        pauseMenu.SetActive(false);
+        PauseMenu.SetActive(false);
         GameManager.Instance.ChangeState(new PlayingState());
     }
     public void BackToMenu()
