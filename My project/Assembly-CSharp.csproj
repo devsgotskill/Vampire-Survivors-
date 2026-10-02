@@ -86,8 +86,11 @@
     <Compile Include="Assets\Scripts\FlipSprite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\PauseManager.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\GameStateMachine.cs" />
     <Compile Include="Assets\Scripts\PauseState.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
