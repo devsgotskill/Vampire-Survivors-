@@ -3,6 +3,7 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     public GameObject upgradeMenu;
+    public GameObject upgradeMenuTwo;
     public GameObject sword;
     public GameObject axe;
     public GameObject katana;
@@ -12,17 +13,32 @@ public class UpgradeManager : MonoBehaviour
     public GameObject healthUI;
     public GameObject xpUI;
     public GameObject bulletUI;
+    private PlayerXp playerXp;
+
     void Start()
     {
         upgradeMenu.SetActive(false);
+        playerXp = FindObjectOfType<PlayerXp>();
     }
     void Update()
     {
-        if (GameManager.Instance.IsUpgrade())
+        if (GameManager.Instance.IsUpgrade() && playerXp.level == 3)
         {
             if (!upgradeMenu.activeSelf)
             {
                 upgradeMenu.SetActive(true);
+                upgradeMenuTwo.SetActive(false);
+                healthUI.SetActive(false);
+                xpUI.SetActive(false);
+                bulletUI.SetActive(false);
+            }
+        }
+        if (GameManager.Instance.IsUpgrade() && playerXp.level == 6)
+        {
+            if (!upgradeMenuTwo.activeSelf)
+            {
+                upgradeMenu.SetActive(false);
+                upgradeMenuTwo.SetActive(true);
                 healthUI.SetActive(false);
                 xpUI.SetActive(false);
                 bulletUI.SetActive(false);
@@ -32,6 +48,7 @@ public class UpgradeManager : MonoBehaviour
     public void SkipUpgrade()
     {
         upgradeMenu.SetActive(false);
+        upgradeMenuTwo.SetActive(false);
         healthUI.SetActive(true);
         xpUI.SetActive(true);
         bulletUI.SetActive(true);
@@ -45,11 +62,7 @@ public class UpgradeManager : MonoBehaviour
         katana.SetActive(false);
         ak.SetActive(false);
         pistol.SetActive(true);
-        healthUI.SetActive(true);
-        xpUI.SetActive(true);
-        bulletUI.SetActive(true);
-        upgradeMenu.SetActive(false);
-        GameManager.Instance.ChangeState(new PlayingState());
+        CloseUpgrade();
     }
     public void UpgradeAutoSwordOne()
     {
@@ -59,11 +72,7 @@ public class UpgradeManager : MonoBehaviour
         katana.SetActive(false);
         ak.SetActive(false);
         autoSwordOne.SetActive(true);
-        healthUI.SetActive(true);
-        xpUI.SetActive(true);
-        bulletUI.SetActive(true);
-        upgradeMenu.SetActive(false);
-        GameManager.Instance.ChangeState(new PlayingState());
+        CloseUpgrade();
     }
     public void UpgradeAxe()
     {
@@ -73,10 +82,45 @@ public class UpgradeManager : MonoBehaviour
         katana.SetActive(false);
         ak.SetActive(false);
         axe.SetActive(true);
+        CloseUpgrade();
+    }
+    public void UpgradeAK()
+    {
+        sword.SetActive(false);
+        autoSwordOne.SetActive(false);
+        axe.SetActive(false);
+        katana.SetActive(false);
+        ak.SetActive(true);
+        pistol.SetActive(false);
+        CloseUpgrade();
+    }
+    public void UpgradeKatana()
+    {
+        sword.SetActive(false);
+        autoSwordOne.SetActive(false);
+        axe.SetActive(false);
+        katana.SetActive(true);
+        ak.SetActive(false);
+        pistol.SetActive(false);
+        CloseUpgrade();
+    }
+    public void UpgradeAutoSwordTwo()
+    {
+        sword.SetActive(false);
+        autoSwordOne.SetActive(false);
+        axe.SetActive(false);
+        katana.SetActive(false);
+        ak.SetActive(false);
+        pistol.SetActive(false);
+        CloseUpgrade();
+    }
+    private void CloseUpgrade()
+    {
+        upgradeMenu.SetActive(false);
+        upgradeMenuTwo.SetActive(false);
         healthUI.SetActive(true);
         xpUI.SetActive(true);
         bulletUI.SetActive(true);
-        upgradeMenu.SetActive(false);
         GameManager.Instance.ChangeState(new PlayingState());
     }
 }

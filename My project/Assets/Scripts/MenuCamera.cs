@@ -61,6 +61,7 @@ public class MenuCamera : MonoBehaviour
     public void GoToMainMenu()
     {
         targetX = mainMenuPosition;
+        targetY = mainMenuPosition;
     }
     public void NextScene()
     {

@@ -26,6 +26,10 @@ public class PlayerXp : MonoBehaviour
             {
                 GameManager.Instance.ChangeState(new UpgradeState());
             }
+            if (level == 6)
+            {
+                GameManager.Instance.ChangeState(new UpgradeState());
+            }
         }
     }
 }
