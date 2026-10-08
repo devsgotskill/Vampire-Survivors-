@@ -10,6 +10,7 @@ public class UpgradeManager : MonoBehaviour
     public GameObject pistol;
     public GameObject ak;
     public GameObject autoSwordOne;
+    public GameObject autoSwordTwo;
     public GameObject healthUI;
     public GameObject xpUI;
     public GameObject bulletUI;
@@ -22,7 +23,7 @@ public class UpgradeManager : MonoBehaviour
     }
     void Update()
     {
-        if (GameManager.Instance.IsUpgrade() && playerXp.level == 3)
+        if (GameManager.Instance.IsUpgrade() && playerXp.level == 2)
         {
             if (!upgradeMenu.activeSelf)
             {
@@ -33,7 +34,7 @@ public class UpgradeManager : MonoBehaviour
                 bulletUI.SetActive(false);
             }
         }
-        if (GameManager.Instance.IsUpgrade() && playerXp.level == 6)
+        if (GameManager.Instance.IsUpgrade() && playerXp.level == 4)
         {
             if (!upgradeMenuTwo.activeSelf)
             {
@@ -108,6 +109,7 @@ public class UpgradeManager : MonoBehaviour
     {
         sword.SetActive(false);
         autoSwordOne.SetActive(false);
+        autoSwordTwo.SetActive(true);
         axe.SetActive(false);
         katana.SetActive(false);
         ak.SetActive(false);

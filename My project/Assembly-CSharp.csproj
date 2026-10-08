@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\EnemyMoveMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerLevelText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\LeaderboardManager.cs" />
     <Compile Include="Assets\Scripts\XpText.cs" />
     <Compile Include="Assets\Scripts\EnemyWalkAnimation.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Assets\Scripts\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyMovementThree.cs" />
     <Compile Include="Assets\Scripts\MenuCamera.cs" />
+    <Compile Include="Assets\Scripts\DailyBestScore.cs" />
     <Compile Include="Assets\Scripts\FlipTransform.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Assets\Scripts\PlayingState.cs" />
     <Compile Include="Assets\Scripts\DeathManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\DailyBestScoreText.cs" />
     <Compile Include="Assets\Scripts\EnemyMovementTwo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -126,6 +129,7 @@
     <Compile Include="Assets\Scripts\Wave.cs" />
     <Compile Include="Assets\Scripts\PlayerXp.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Scripts\LeaderboardUI.cs" />
     <Compile Include="Assets\Scripts\UpgradeState.cs" />
     <Compile Include="Assets\Scripts\flipSpriteGuns.cs" />
     <Compile Include="Assets\Scripts\GameState.cs" />

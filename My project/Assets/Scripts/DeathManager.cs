@@ -1,26 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DeathManager : MonoBehaviour
 {
     public GameObject DeathMenu;
+    public TextMeshProUGUI scoreText;
     public int playerHealth;
-    void Start()
-    {
-
-      
-    }
+    public TMP_InputField nameInput;
     void Update()
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         playerHealth = playerObject.GetComponent<Player>().health;
+
         if (playerHealth <= 0)
         {
-            if (GameManager.Instance.IsDead())
-            {
-                Resume();
-            }
-            else if (GameManager.Instance.IsPlaying())
+            if (GameManager.Instance.IsPlaying())
             {
                 Dead();
             }
@@ -28,13 +23,13 @@ public class DeathManager : MonoBehaviour
     }
     public void Dead()
     {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        PlayerXp playerXp = playerObject.GetComponent<PlayerXp>();
+
+        scoreText.text = "Score: " + playerXp.totalXP;
+
         DeathMenu.SetActive(true);
         GameManager.Instance.ChangeState(new DeathState());
-    }
-    public void Resume()
-    {
-        DeathMenu.SetActive(false);
-        GameManager.Instance.ChangeState(new PlayingState());
     }
     public void BackToMenu()
     {
@@ -43,5 +38,18 @@ public class DeathManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Game");
+    }
+    public void SubmitScore()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        PlayerXp playerXp = playerObject.GetComponent<PlayerXp>();
+        string playerName = nameInput.text;
+
+        if (playerName == "")
+        {
+            return;
+        }
+        LeaderboardManager.Instance.AddScore(playerName, playerXp.totalXP);
+        SceneManager.LoadScene("Menu");
     }
 }

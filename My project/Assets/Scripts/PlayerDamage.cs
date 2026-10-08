@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class PlayerDamage : MonoBehaviour
 {
     private Player player;
