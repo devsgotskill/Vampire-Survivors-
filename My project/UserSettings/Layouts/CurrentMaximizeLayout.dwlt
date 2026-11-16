@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 168}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 0
-  controlID: 88
+  controlID: 87
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -97,7 +97,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 168}
   m_MaxSize: {x: 16192, y: 24288}
   vertical: 1
-  controlID: 89
+  controlID: 88
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 90
+  controlID: 89
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -249,31 +249,16 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 68942
-      m_LastClickedID:
-        m_Data: 68942
-      m_ExpandedIDs:
-      - m_Data: -17120
-      - m_Data: -10820
-      - m_Data: -1348
       - m_Data: -1344
-      - m_Data: 48652
-      - m_Data: 48916
-      - m_Data: 51246
-      - m_Data: 51526
-      - m_Data: 54172
-      - m_Data: 54452
-      - m_Data: 68514
-      - m_Data: 68710
-      - m_Data: 68720
-      - m_Data: 69050
-      - m_Data: 69204
-      - m_Data: 69214
-      - m_Data: 69224
+      m_LastClickedID:
+        m_Data: -1344
+      m_ExpandedIDs:
+      - m_Data: -1346
+      - m_Data: -1344
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Border
-        m_OriginalName: Border
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -281,10 +266,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: 69248
+          m_Data: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 5}
@@ -319,7 +304,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 91
+  controlID: 90
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -410,44 +395,25 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Devs PC\Documents\GitHub\Vampire-Survivors-\My project
+  m_LastProjectPath: C:\Users\devin.blanaru\Documents\GitHub\Vampire-Survivors-\My
+    project
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1413}
+    scrollPos: {x: 0, y: 469}
     m_SelectedIDs:
-    - m_Data: 49818
+    - m_Data: 50486
     m_LastClickedID:
-      m_Data: 49818
+      m_Data: 50486
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49624
-    - m_Data: 49626
-    - m_Data: 49628
-    - m_Data: 49630
-    - m_Data: 49632
-    - m_Data: 49634
-    - m_Data: 49636
-    - m_Data: 49638
-    - m_Data: 49640
-    - m_Data: 49642
-    - m_Data: 49644
-    - m_Data: 49646
-    - m_Data: 49648
-    - m_Data: 49650
-    - m_Data: 49652
-    - m_Data: 49654
-    - m_Data: 49656
-    - m_Data: 49658
-    - m_Data: 49660
-    - m_Data: 49662
-    - m_Data: 49664
-    - m_Data: 49666
-    - m_Data: 49668
-    - m_Data: 49670
-    - m_Data: 49804
-    - m_Data: 49812
+    - m_Data: 50274
+    - m_Data: 50276
+    - m_Data: 50278
+    - m_Data: 50280
+    - m_Data: 50282
+    - m_Data: 50284
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,30 +446,12 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49624
-    - m_Data: 49626
-    - m_Data: 49628
-    - m_Data: 49630
-    - m_Data: 49632
-    - m_Data: 49634
-    - m_Data: 49636
-    - m_Data: 49638
-    - m_Data: 49640
-    - m_Data: 49642
-    - m_Data: 49644
-    - m_Data: 49646
-    - m_Data: 49648
-    - m_Data: 49650
-    - m_Data: 49652
-    - m_Data: 49654
-    - m_Data: 49656
-    - m_Data: 49658
-    - m_Data: 49660
-    - m_Data: 49662
-    - m_Data: 49664
-    - m_Data: 49666
-    - m_Data: 49668
-    - m_Data: 49670
+    - m_Data: 50274
+    - m_Data: 50276
+    - m_Data: 50278
+    - m_Data: 50280
+    - m_Data: 50282
+    - m_Data: 50284
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -531,8 +479,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 68942
-    m_LastClickedInstanceID: 68942
+    - m_Data: -1344
+    m_LastClickedInstanceID: -1344
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 48646
@@ -610,7 +558,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 275}
+    m_ScrollPosition: {x: 0, y: 182}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -1273,9 +1221,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0, y: -2.81, z: -0.00999999}
+    m_Target: {x: -0.059137657, y: 0.047725186, z: -0.13906375}
     speed: 2
-    m_Value: {x: 0, y: -2.81, z: -0.00999999}
+    m_Value: {x: -0.059137657, y: 0.047725186, z: -0.13906375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1325,9 +1273,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 7.3535285
     speed: 2
-    m_Value: 10
+    m_Value: 7.3535285
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1345,7 +1293,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.011687829, y: -0.020400094, z: -0.00023982012, w: -0.99973315}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 13}
@@ -1444,8 +1392,8 @@ MonoBehaviour:
     y: 0
     width: 431
     height: 981
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
